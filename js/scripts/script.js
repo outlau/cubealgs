@@ -9,8 +9,6 @@ $(document).ready(function() {
         openNav();
     });
     
-    $("#test").text(detectmob());
-    
     $(window).load(function() {
         sidenavsectionsaddeventlistener(document.getElementById('ollmenuitem'), document.getElementById('sectionoll') );
         sidenavsectionsaddeventlistener(document.getElementById('pllmenuitem'), document.getElementById('sectionpll'));
@@ -53,9 +51,21 @@ function createOllGrid(){
                     
                 var splitalg = olls[section][alg].algorithm.split("\n");
                 var sectionalg = "";
-                for(var i = 0; i<splitalg.length; i++){
-                    sectionalg += splitalg[i] + "<br>";
+                
+                if(detectmob()){
+                    for(var i = 0; i<splitalg.length; i++){
+                        sectionalg += splitalg[i] + "<br>";
+                    }
                 }
+                else{
+                    for(var i = 0; i<splitalg.length; i++){
+                        sectionalg += splitalg[i];
+                    }
+                }
+                
+                
+                
+                
                     
                 name.innerHTML += "<p class='algo'>"+sectionalg+"</p>";
                 namecontainer.appendChild(name);
@@ -117,7 +127,6 @@ function createOllGrid(){
                 sidenavitem.addEventListener("touchmove", function(){
                     movement = true;
                 }, false);
-                
                 sidenavitem.addEventListener("touchend", initaliseEvent(document.getElementById("sectionoll"+sectioncount)), false);
                 
                 sidenavitem.addEventListener("click", initaliseEvent(document.getElementById("sectionoll"+sectioncount)), false);
@@ -199,15 +208,10 @@ function createPllGrid(){
                 for(var j = 0; j < connections.length; j++){
                     var line = document.createElement("div");
                     line.className = "line";
-                    
-            
                     imgcontainer.appendChild(line);
-                    
                     var start = connections[j][0]-1;
                     var end = connections[j][1]-1;
-                    
                     adjustLine(squares[start], squares[end], line );
-                    
                 }
             }
             else{
@@ -217,7 +221,6 @@ function createPllGrid(){
                 document.getElementById("cont").appendChild(header);
                 
                 var sidenavitem = document.createElement("li");
-                sidenavitem.innerHTML = "<a onclick='scroll(sectionpll"+sectioncount+")'>"+sectionname+"</a>";
                 
                 sidenavitem.innerHTML = "<a>"+sectionname+"</a>";
                 sidenavitem.addEventListener("touchstart", function(){
@@ -226,9 +229,9 @@ function createPllGrid(){
                 sidenavitem.addEventListener("touchmove", function(){
                     movement = true;
                 }, false);
-                
                 sidenavitem.addEventListener("touchend", initaliseEvent(document.getElementById("sectionpll"+sectioncount)) , false);
                 
+                sidenavitem.addEventListener("click", initaliseEvent(document.getElementById("sectionoll"+sectioncount)), false);
                 
                 document.getElementById("pll-list").appendChild(sidenavitem);
             }
@@ -259,8 +262,6 @@ function openNav() {
     var bluramt = "1px";
     var popoutamt = "200px";
     
-    //$(document.body).css("overflow","hidden");
-    //$("$cont").css("overflow","hidden");
     //$('#cont').css("filter","blur("+bluramt+")");
     
     $('#sidenav').transition({ 
@@ -297,8 +298,6 @@ function closeNav() {
 
 function initaliseEvent(i){
     return function(){
-        
-    console.log(i);
         scroll(i);
     };
 }
@@ -371,7 +370,7 @@ function sidenavsectionsaddeventlistener(div, section){
         movement = true;
     }, false);
     div.addEventListener("touchend", initaliseEvent(section), false);
-    
+    div.addEventListener("click", initaliseEvent(section), false);
     
     
     
