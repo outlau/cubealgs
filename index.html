@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    	
+        <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+    	
+        <link rel="stylesheet" href="styles/style.css" type="text/css" />
+        <link rel="stylesheet" href="styles/pll.css" type="text/css" />
+        <link rel="stylesheet" href="styles/navmenu.css" type="text/css" />
+    	
+    	<!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    	
+    	<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+    
+    	<script type="text/javascript" src="js/algs/ollalgs.js"></script>
+    	<script type="text/javascript" src="js/algs/pllalgs.js"></script>
+    	<script type="text/javascript" src="js/scripts/script.js"></script>
+    
+    </head>
+    <body>
+        <nav id="sidenav" class="menu" style="left:-200px;">
+            <header class="menu-header">
+                <span class="menu-header-title">Algorithms</span>
+            </header>
+            
+            <section class="menu-section">
+                <!--onclick="scroll(document.getElementById('sectionpll'))" -->
+                <a id='ollmenuitem' >
+                    <h3 class="menu-section-title">OLL</h3>
+                </a>
+                <ul class="menu-section-list" id="oll-list">
+                    
+                </ul>
+            </section>
+            
+            <section class="menu-section">
+                <a id='pllmenuitem' onclick="scroll(document.getElementById('sectionpll'))">
+                    <h3 class="menu-section-title">PLL</h3>
+                </a>
+                <ul class="menu-section-list" id="pll-list">
+                   
+                </ul>
+            </section>
+            
+            <section class="menu-section">
+                <a id='notationmenuitem' onclick="scroll(document.getElementById('notation-div'))">
+                    <h3 class="menu-section-title">NOTATION</h3>
+                </a>
+            </section>
+            
+        </nav>
+        
+        <div class="container-fluid">
+            <div class="topheader">
+                <div class="glyphicon glyphicon-menu-hamburger" id="opensidenav"></div>
+             </div>
+        </div>
+             
+        <div class="container" id="cont" onclick="closeNav()">
+              
+        </div>
+        
+        <div id="notation-div">
+        <iframe id="notation" src="https://ruwix.com/widget/notation-3d/" width="300px" height="530px" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </body>
+</html>
