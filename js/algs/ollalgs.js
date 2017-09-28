@@ -310,7 +310,7 @@ var olls = {
         },
         second: {
             name: "43",
-            algorithm: "f' [L' U' L U] f",
+            algorithm: "f' [L' U' L U] f \n \n Alt: \n Y' U2 R' U' F' U F R",
             squares:   [[0,0,1,0,0],
                         [0,1,0,0,1],
                         [0,1,1,0,1],

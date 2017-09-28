@@ -125,7 +125,7 @@ var plls = {
         name: "V Perm",
         v: {
             name: "V Perm",
-            algorithm: "[R' U' R d'] [R' F'] \n [R2 U' R' U] [R' F R F]",
+            algorithm: "[R' U R' d'] [R' F'] \n [R2 U' R' U] [R' F R F]",
             connections:   [[2,6],
                             [6,2],
                             [1,7],
