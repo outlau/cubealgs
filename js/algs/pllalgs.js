@@ -97,8 +97,8 @@ var plls = {
             algorithm: "[R' U R' F'] [R U R' U'] \n [R' F] [R2 U' R'] U'",
             connections:   [[3,9],
                             [9,3],
-                            [4,6],
-                            [6,4]]
+                            [8,6],
+                            [6,8]]
         }
     },
     rperm:{

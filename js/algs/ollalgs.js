@@ -1,6 +1,6 @@
 var olls = {
     alledges:{
-        name: "All edges",
+        name: "All Edges Oriented",
         first: {
             name: "27 (Sune)",
             algorithm: "R U R' U R U2 R'",
@@ -67,7 +67,7 @@ var olls = {
         
     },
     noedges:{
-        name: "No edges oriented",
+        name: "No Edges Oriented",
         first: {
             name: "1",
             algorithm: "R U2 [R2 F R F'] \n U2 [R' F R F']",
@@ -142,7 +142,7 @@ var olls = {
         }
     },
     cshapes:{
-        name: "C shapes",
+        name: "C Shapes",
         first: {
             name: "46",
             algorithm: "R' U' [R' F R F'] U R",
@@ -163,7 +163,7 @@ var olls = {
         }
     },
     Ishapes:{
-        name: "Line shapes",
+        name: "Line Shapes",
         first: {
             name: "55",
             algorithm: "R U2 R2 U' R \n U' R' U2 F R F'",
@@ -259,7 +259,7 @@ var olls = {
         },
     },
     bigLshapes:{
-        name: "Big L shapes",
+        name: "Big L Shapes",
         first: {
             name: "13",
             algorithm: "r U' r' U' r U r' \n y' [R' U R]",
@@ -518,44 +518,46 @@ var olls = {
                         [0,0,1,1,0]]
         }
     },
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    lightningbolt:{
-        name: "lightningbolts",
+    squareshapes:{
+        name: "Square Shapes",
         first: {
-            name: "sune",
-            algorithm: "sunealg",
-            squares:   [[0,1,0,0,0],
-                        [0,0,1,0,1],
-                        [0,1,1,1,0],
-                        [0,1,1,0,0],
-                        [0,0,0,1,0]]
-        },
-        second: {
-            name: "sune",
-            algorithm: "sunealg",
+            name: "6",
+            algorithm: "r U2' R' U' R U' r'",
             squares:   [[0,0,0,0,0],
                         [1,0,1,1,0],
+                        [1,0,1,1,0],
+                        [0,0,0,0,1],
+                        [0,1,1,0,0]]
+        },
+        second: {
+            name: "5",
+            algorithm: "r' U2 R U R' U r ",
+            squares:   [[0,1,1,0,0],
+                        [0,0,0,0,1],
+                        [1,0,1,1,0],
+                        [1,0,1,1,0],
+                        [0,0,0,0,0]]
+        }
+    },
+    arrowhshapes:{
+        name: "Arrow And H Shapes",
+        first: {
+            name: "28 (Arrow)",
+            algorithm: "[r U R' U'] r' \n [R U R U' R']",
+            squares:   [[0,0,0,0,0],
                         [0,1,1,1,0],
-                        [0,0,1,0,1],
-                        [0,1,0,0,0]]
+                        [0,1,1,0,1],
+                        [0,1,0,1,0],
+                        [0,0,1,0,0]]
+        },
+        second: {
+            name: "57 (H Shape)",
+            algorithm: "[R U R' U'] M' [U R U' r']",
+            squares:   [[0,0,1,0,0],
+                        [0,1,0,1,0],
+                        [0,1,1,1,0],
+                        [0,1,0,1,0],
+                        [0,0,1,0,0]]
         }
     }
 };

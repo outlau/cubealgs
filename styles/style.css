@@ -184,7 +184,7 @@ SIDEBAR
     width:200px;
     position: fixed;
     overflow-x: hidden;
-    z-index:5;
+    z-index:50;
     /*transition: 0.5s;*/
     /*background-color: #111;
     padding-top: 60px;

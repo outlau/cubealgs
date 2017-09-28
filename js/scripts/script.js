@@ -109,15 +109,18 @@ function createOllGrid(){
                 
                 var sidenavitem = document.createElement("li");
                 
-                sidenavitem.innerHTML = "<a onclick='scroll(sectionoll"+sectioncount+")'>"+sectionname+"</a>";
+                sidenavitem.innerHTML = "<a>"+sectionname+"</a>";
+                
                 sidenavitem.addEventListener("touchstart", function(){
                     movement = false;
                 }, false);
                 sidenavitem.addEventListener("touchmove", function(){
                     movement = true;
                 }, false);
+                
                 sidenavitem.addEventListener("touchend", initaliseEvent(document.getElementById("sectionoll"+sectioncount)), false);
                 
+                sidenavitem.addEventListener("click", initaliseEvent(document.getElementById("sectionoll"+sectioncount)), false);
                 document.getElementById("oll-list").appendChild(sidenavitem);
             }
             count++;
@@ -216,12 +219,14 @@ function createPllGrid(){
                 var sidenavitem = document.createElement("li");
                 sidenavitem.innerHTML = "<a onclick='scroll(sectionpll"+sectioncount+")'>"+sectionname+"</a>";
                 
+                sidenavitem.innerHTML = "<a>"+sectionname+"</a>";
                 sidenavitem.addEventListener("touchstart", function(){
                     movement = false;
                 }, false);
                 sidenavitem.addEventListener("touchmove", function(){
                     movement = true;
                 }, false);
+                
                 sidenavitem.addEventListener("touchend", initaliseEvent(document.getElementById("sectionpll"+sectioncount)) , false);
                 
                 
@@ -243,7 +248,6 @@ function objLength(obj) {
 
 function scroll(i){
     
-    console.log(i);
     
     if(!movement){
         i.scrollIntoView();
@@ -255,15 +259,15 @@ function openNav() {
     var bluramt = "1px";
     var popoutamt = "200px";
     
-    $(document.body).css("overflow-y","hidden");
-    
-    $('#cont').css("filter","blur("+bluramt+")");
+    //$(document.body).css("overflow","hidden");
+    //$("$cont").css("overflow","hidden");
+    //$('#cont').css("filter","blur("+bluramt+")");
     
     $('#sidenav').transition({ 
         x: popoutamt,
         duration: 500 });
     
-    $('#opensidenav').css("filter","blur("+bluramt+")");
+    //$('#opensidenav').css("filter","blur("+bluramt+")");
     $('#opensidenav').transition({ 
         x: popoutamt,
         duration: 500 });
@@ -275,9 +279,9 @@ function closeNav() {
     
     var popoutamt = "-200px";
     
-    $(document.body).css("overflow-y","visible");
+    //$(document.body).css("overflow-y","visible");
     
-    $('#cont').css("filter","blur(0px)");
+    //$('#cont').css("filter","blur(0px)");
     
     $('#sidenav').transition({ 
         x: popoutamt,
@@ -286,13 +290,15 @@ function closeNav() {
     $('#opensidenav').transition({ 
         x: '0px',
         duration: 500 });
-    $('#opensidenav').css("filter","blur(0px)");
+    //$('#opensidenav').css("filter","blur(0px)");
     
     document.body.style.backgroundColor = "white";
 }
 
 function initaliseEvent(i){
     return function(){
+        
+    console.log(i);
         scroll(i);
     };
 }
