@@ -231,7 +231,7 @@ function createPllGrid(){
                 }, false);
                 sidenavitem.addEventListener("touchend", initaliseEvent(document.getElementById("sectionpll"+sectioncount)) , false);
                 
-                sidenavitem.addEventListener("click", initaliseEvent(document.getElementById("sectionoll"+sectioncount)), false);
+                sidenavitem.addEventListener("click", initaliseEvent(document.getElementById("sectionpll"+sectioncount)), false);
                 
                 document.getElementById("pll-list").appendChild(sidenavitem);
             }

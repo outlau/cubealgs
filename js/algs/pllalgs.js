@@ -203,7 +203,7 @@ var plls = {
         },
         gc: {
             name: "Gc",
-            algorithm: "R2 U' R U' R U R' \n U R2 {D' U} R U' R' D",
+            algorithm: "R2 U' R U' R U R' \n U R2 {D' U} R U' R' D \n alt: \n y2 R2 F2 R U2 R U2 R' F \n (R U R' U') R' F R2",
             connections:   [[1,7],
                             [8,4],
                             [9,1],
