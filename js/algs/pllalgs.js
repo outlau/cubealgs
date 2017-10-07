@@ -10,7 +10,7 @@ var plls = {
         },
         ub: {
             name: "Ub",
-            algorithm: "[R U'] [R U] [R U] \n [R U'] R' U R2",
+            algorithm: "[R U'] [R U] [R U] \n [R U'] R' U' R2",
             
             connections:   [[6,4],
                             [4,8],
