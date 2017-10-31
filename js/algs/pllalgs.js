@@ -3,14 +3,14 @@ var plls = {
         name: "U Perm",
         ua: {
             name: "Ua",
-            algorithm: "R2 U [R U R' U'] \n [R' U'] [R' U R']",
+            algorithm: "R2 U [R U R' U'] \n [R' U'] [R' U R'] \n alt: \n M'2 U' M U'2 M' U' M'2" ,
             connections:   [[4,6],
                             [8,4],
                             [6,8]]
         },
         ub: {
             name: "Ub",
-            algorithm: "[R U'] [R U] [R U] \n [R U'] R' U' R2",
+            algorithm: "[R U'] [R U] [R U] \n [R U'] R' U' R2 \n alt: \n M'2 U M U'2 M' U M'2" ,
             
             connections:   [[6,4],
                             [4,8],
