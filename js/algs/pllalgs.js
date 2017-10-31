@@ -22,18 +22,16 @@ var plls = {
         aa: {
             name: "Aa",
             algorithm: "x [R' U R'] D2 \n [R U' R'] D2 R2",
-            connections:   [[1,3],
-                            [3,7],
-                            [7,1]]
+            connections:   [[9,1],
+                            [1,3],
+                            [3,9]]
         },
         ab: {
             name: "Ab",
-            algorithm: "TO DO",
-            connections:   [[1,3],
-                            [7,1],
-                            [2,4],
-                            [6,2],
-                            [3,7]]
+            algorithm: "x R2 D2 [R U R'] \n D2 [R U' R]",
+            connections:   [[9,3],
+                            [3,1],
+                            [1,9]]
         }
     },
     hperm:{
@@ -170,7 +168,7 @@ var plls = {
         },
         nb: {
             name: "Nb",
-            algorithm: "R' U R' F R F' \n R U' R' F' U \n F R U R' U' R",
+            algorithm: "z U' R D' R2 U R' D \n U' R D' R2 U R' D \n alt: \n R' U R' F R F' \n R U' R' F' U \n F R U R' U' R",
             connections:   [[3,7],
                             [7,3],
                             [2,8],
