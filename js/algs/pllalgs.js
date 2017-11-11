@@ -124,10 +124,10 @@ var plls = {
         v: {
             name: "V Perm",
             algorithm: "[R' U R' d'] [R' F'] \n [R2 U' R' U] [R' F R F]",
-            connections:   [[2,6],
-                            [6,2],
-                            [1,7],
-                            [7,1]]
+            connections:   [[1,9],
+                            [9,1],
+                            [2,6],
+                            [6,2]]
                             
         }
     },
