@@ -92,7 +92,7 @@ var plls = {
         },
         jb: {
             name: "Jb",
-            algorithm: "[R' U R' F'] [R U R' U'] \n [R' F] [R2 U' R'] U'",
+            algorithm: "[R U R' F'] [R U R' U'] \n [R' F] [R2 U' R'] U'",
             connections:   [[3,9],
                             [9,3],
                             [8,6],
@@ -123,7 +123,7 @@ var plls = {
         name: "V Perm",
         v: {
             name: "V Perm",
-            algorithm: "[R' U R' d'] [R' F'] \n [R2 U' R' U] [R' F R F]",
+            algorithm: "[R' U R' d'] [R' F'] \n [R2 U' R' U] [R' F R F] \n alt: \n z D' R2 D R2' U R' D' \n R U' R U R' D R U'"  ,
             connections:   [[1,9],
                             [9,1],
                             [2,6],
@@ -222,8 +222,4 @@ var plls = {
                             
         }
     }
-    
-    
-    
-    
 };

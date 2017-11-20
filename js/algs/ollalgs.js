@@ -400,7 +400,7 @@ var olls = {
         },
         third: {
             name: "41",
-            algorithm: "[R U' R' U2] R U y \n R U' R' U' F'",
+            algorithm: "f R U R' U' f' U' \n R U R' U R U2 R'",
             squares:   [[0,0,1,0,0],
                         [0,1,0,1,0],
                         [1,0,1,1,0],
@@ -409,12 +409,12 @@ var olls = {
         },
         fourth: {
             name: "42",
-            algorithm: "R' U2 [R U R' U] R y \n [F R U R' U' F']",
-            squares:   [[0,0,0,0,0],
-                        [1,0,1,1,0],
+            algorithm: "r' R U F R U \n R' U' F' M'",
+            squares:   [[0,0,1,0,0],
+                        [0,1,0,1,0],
                         [0,1,1,0,1],
-                        [1,0,0,1,0],
-                        [0,0,1,0,0]]
+                        [0,0,1,0,0],
+                        [0,1,0,1,0]]
         },
         
     },
