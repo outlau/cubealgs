@@ -21,17 +21,17 @@ var plls = {
         name: "A Perm",
         aa: {
             name: "Aa",
-            algorithm: "x [R' U R'] D2 \n [R U' R'] D2 R2",
-            connections:   [[9,1],
+            algorithm: "x L2 D2 [L' U' L] \n D2 [L' U L']",
+            connections:   [[7,1],
                             [1,3],
-                            [3,9]]
+                            [3,7]]
         },
         ab: {
             name: "Ab",
-            algorithm: "x R2 D2 [R U R'] \n D2 [R U' R]",
-            connections:   [[9,3],
-                            [3,1],
-                            [1,9]]
+            algorithm: "x [L U' L] D2 \n [L' U L] D2 L2",
+            connections:   [[3,1],
+                            [1,7],
+                            [7,3]]
         }
     },
     hperm:{
@@ -123,7 +123,7 @@ var plls = {
         name: "V Perm",
         v: {
             name: "V Perm",
-            algorithm: "[R' U R' d'] [R' F'] \n [R2 U' R' U] [R' F R F] \n alt: \n z D' R2 D R2' U R' D' \n R U' R U R' D R U'"  ,
+            algorithm: "R U2 R' D R U' R U' \n R U R'2 D R' U' R D2 \n alt: \n z D' R2 D R2' U R' D' \n R U' R U R' D R U'"  ,
             connections:   [[1,9],
                             [9,1],
                             [2,6],
@@ -168,7 +168,7 @@ var plls = {
         },
         nb: {
             name: "Nb",
-            algorithm: "z U' R D' R2 U R' D \n U' R D' R2 U R' D \n alt: \n R' U R' F R F' \n R U' R' F' U \n F R U R' U' R",
+            algorithm: "z D' R U' R2 D R' U D' \n R U' R2 D R' U \n alt: \n R' U R' F R F' \n R U' R' F' U \n F R U R' U' R",
             connections:   [[3,7],
                             [7,3],
                             [2,8],

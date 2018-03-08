@@ -168,6 +168,7 @@ function createPllGrid(){
                 
                 var sectionalg = "";
                 var splitalg = plls[section][alg].algorithm.split("\n");
+                
                 if(detectmob()){
                     for(var i = 0; i<splitalg.length; i++){
                         sectionalg += splitalg[i] + "<br>";
@@ -175,7 +176,10 @@ function createPllGrid(){
                 }
                 else{
                     for(var i = 0; i<splitalg.length; i++){
-                        sectionalg += splitalg[i];
+                        if(splitalg[i]==" alt: ")
+                            sectionalg+="<br>"+splitalg[i]+"<br>";
+                        else
+                            sectionalg += splitalg[i];
                     }
                 }
                 
